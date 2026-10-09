@@ -30,7 +30,7 @@ export const IncomeSourceInputSchema = z.object({
   metadata: z.record(z.any()).optional(),
 });
 
-export type IncomeSourceInput = z.infer<typeof IncomeSourceInputSchema>;
+export type IncomeSourceInput = z.input<typeof IncomeSourceInputSchema>;
 
 // Zod schema for deductions (Chapter VI-A, Sec 24b, etc.)
 export const DeductionsInputSchema = z.object({
@@ -46,7 +46,7 @@ export const DeductionsInputSchema = z.object({
   otherExemptions: z.number().nonnegative().optional().default(0), // Other LTA/allowances
 });
 
-export type DeductionsInput = z.infer<typeof DeductionsInputSchema>;
+export type DeductionsInput = z.input<typeof DeductionsInputSchema>;
 
 // Stateless calculation request payload schema
 export const StatelessCalculationRequestSchema = z.object({
@@ -59,7 +59,7 @@ export const StatelessCalculationRequestSchema = z.object({
   isResident: z.boolean().optional().default(true),
 });
 
-export type StatelessCalculationRequest = z.infer<typeof StatelessCalculationRequestSchema>;
+export type StatelessCalculationRequest = z.input<typeof StatelessCalculationRequestSchema>;
 
 // Detailed calculation trace item
 export interface CalculationTraceStep {

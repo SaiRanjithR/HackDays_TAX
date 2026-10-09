@@ -26,7 +26,7 @@ export interface CreateTwinOptions {
   facts?: {
     factKey: string;
     category: string;
-    factValue: any;
+    factValue?: any;
     verificationState?: VerificationState;
   }[];
   transactions?: {

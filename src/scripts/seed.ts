@@ -1,4 +1,6 @@
-import { PrismaClient, ResidentialStatus, TaxRegime, IncomeCategory, VerificationState } from '@prisma/client';
+import 'dotenv/config';
+import { PrismaClient, ResidentialStatus, TaxRegime } from '@prisma/client';
+import { IncomeCategory, VerificationState } from '../lib/types';
 import { TaxTwinManager } from '../lib/tax-twin/manager';
 
 const prisma = new PrismaClient();
